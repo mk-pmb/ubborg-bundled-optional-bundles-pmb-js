@@ -44,9 +44,7 @@ function trueOrUndef(x) { return ((x === true) || (x === undefined)); }
 
 function makeBob(subBunAbs, opt, defaultFeatureCfg) {
   let { paramKey } = opt;
-  if (paramKey === null) {
-    paramKey = pathLib.basename(pathLib.dirname(subBunAbs));
-  }
+  if (paramKey === null) { paramKey = pathLib.basename(subBunAbs); }
   const subResType = (opt.subResType || 'bundle');
 
   let subBunNames;

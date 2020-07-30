@@ -1,5 +1,5 @@
 { "name": "ubborg-bundled-optional-bundles-pmb",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Helps make bundles that are collections of all the other bundles in the same directory.",
   "keywords": [],
 
