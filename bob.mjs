@@ -28,6 +28,13 @@ async function scanSubBunNames(subBunAbs, opt) {
   files.sort();
   const toOptKey = fileNameToOptKey.bind(null, opt);
   const optKeyNames = files.map(toOptKey).filter(Boolean);
+  if (!optKeyNames.length) {
+    if (!opt.allowEmptyBundle) {
+      const err = ('Found no sub bundles! (None of ' + files.length
+        + ' files found in ' + subBunAbs + ' met the criteria.)');
+      throw new Error(err);
+    }
+  }
   return optKeyNames;
 }
 
